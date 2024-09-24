@@ -1,0 +1,447 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+.top-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f0f0f0;
+    padding: 10px 20px;
+    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.3);
+    
+}
+
+.branding  {
+    font-size: 24px;
+    color: #007bff;
+    margin-left: 70px;
+}
+
+.branding span {
+    font-weight: bold;
+    width: 50px;
+}
+
+.icon-navigation {
+    display: flex;
+    align-items: center;
+}
+
+.icon-wrapper {
+    margin: 0 10px;
+    width: 50px;
+    height: 50px;
+    background-color: #007bff;
+    padding: 5px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    position: relative;
+}
+
+.icon-wrapper a {
+    color: white;
+    font-size: 20px;
+    text-align: center;
+}
+
+/* Notification Badge */
+.notification {
+    position: relative;
+}
+
+.notification-badge {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    width: 12px;
+    height: 12px;
+    background-color: red;
+    border-radius: 50%;
+    border: 2px solid white;
+}
+
+/* Profile Icon */
+.profile-icon-wrapper {
+    margin: 0 10px;
+}
+
+.profile-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    cursor: pointer;
+    padding: 1px;
+}
+
+/* More Options (Three Dots) */
+.more-options {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 30px;
+    margin-left: 20px;
+    cursor: pointer;
+    margin-right: 100px;
+}
+
+.dot {
+    width: 5px;
+    height: 5px;
+    background-color: #007bff;
+    border-radius: 50%;
+}
+
+/* Adjust the spacing between elements */
+.icon-wrapper:not(:last-child),
+.profile-icon-wrapper {
+    margin-right: 20px;
+    
+}
+
+h4{
+    color: #0029ff; 
+    font-size: 25px;
+    margin-top: 20px;
+    margin-left: 200px;
+}
+
+.explore{
+    background-color: rgb(218, 220, 224);
+    border-radius: 1px;
+    margin: 30px 70px 70px 200px;
+    padding: 20px 20px;
+    display: inline-block;
+    
+}
+h5{
+    font-weight: 300px;
+}
+.submit-task {
+    background-color: #007bff;  /* Blue background */
+    color: white;               /* White text */
+    padding: 10px 20px;         /* Padding for the button */
+    font-size: 16px;            /* Font size for the button text */
+    border: none;               /* Remove border */
+    border-radius: 10px;        /* Rounded corners */
+    cursor: pointer;            /* Change cursor to pointer on hover */
+    display: inline-block;      /* Keep button inline */
+    text-align: center;         /* Center the text */
+    font-weight: bold;          /* Make text bold */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);  /* Subtle shadow */
+    transition: background-color 0.3s ease; 
+       /* Smooth hover transition */
+    margin-left: 550px;
+}
+
+/* Hover effect for the button */
+.submit-task:hover {
+    background-color: #0056b3;  /* Darker blue on hover */
+}
+
+/* Sidebar Styling */
+.sidebar-container {
+    position: fixed;
+    top: 0;
+    left: -350px; /* Initially hidden */
+    width: 350px;
+    height: 100%;
+    background-color: white;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+    border-radius: 0 10px 10px 0;
+    z-index: 9999;
+    overflow-y: auto;
+    transition: all 0.5s ease; /* Smooth transition */
+}
+
+.sidebar-header {
+    background-color: black;
+    color: white;
+    padding: 20px;
+    border-radius: 0 10px 0 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sidebar-content {
+    padding: 20px;
+}
+
+.sidebar-content ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.sidebar-content ul li {
+    margin-bottom: 15px;
+}
+
+.sidebar-content ul li:before {
+    content: "• ";
+    font-size: 20px;
+    color: black;
+    margin-right: 10px;
+}
+
+.close-btn {
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Main Content Styling */
+.main-content {
+    margin: 30px 70px;
+}
+
+h4 {
+    color: #0029ff;
+    font-size: 25px;
+}
+
+.submit-task {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-left: 570px;
+}
+
+.submit-task:hover {
+    background-color: #0056b3;
+}
+
+/* Sidebar Open/Close Classes */
+.sidebar-open {
+    left: 0;
+    top: 10%;
+    height: 500px;
+    
+}
+
+.sidebar-closed {
+    left: -350px;
+}
+
+/* Open Sidebar Button */
+.open-sidebar-btn {
+    position: fixed;
+    top: 11%;
+    left: 0;
+    background-color: black;
+    color: white;
+    padding: 10px;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    z-index: 10000; /* Higher than sidebar to remain visible */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    width: 100px;
+    border-radius: 5px;
+    margin-bottom: 20px white;
+}
+
+.sidebar-board {
+    position: fixed; /* Keeps the sidebar fixed */
+    top: 10%;
+    right: 0;
+    width: 100px; /* Adjust width as needed */
+    height: 400px; /* Full height */
+    background-color: #f0f0f0; /* Match the background color */
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2); /* Optional shadow for depth */
+    display: flex;
+    flex-direction: column;
+    z-index: 10000; /* Ensure it's on top */
+    transition: all 0.3s ease; /* Smooth transition */
+    border-radius: 20px 0 0 20px; /* Curved left side */
+}
+
+
+/* Hide the open button when the sidebar is open */
+.sidebar-open ~ #openSidebar {
+    display: none;
+}
+
+/* Show the open button when the sidebar is closed */
+.sidebar-closed ~ #openSidebar {
+    display: flex;
+   
+}
+
+
+.notice-board {
+    position: fixed; /* Keeps the sidebar fixed */
+    top: 10%;
+    right: 0;
+    width: 100px; /* Adjust width as needed */
+    height: 400px; /* Full height */
+    background-color: #f0f0f0; /* Match the background color */
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2); /* Optional shadow for depth */
+    display: flex;
+    flex-direction: column;
+    z-index: 9999; /* Ensure it's on top */
+    transition: all 0.3s ease; /* Smooth transition */
+    border-radius: 20px 0 0 20px; /* Curved left side */
+}
+
+.notice-header {
+    background-color: black; /* Header background */
+    color: white; /* Header text color */
+    padding: 15px; /* Padding for the header */
+    display: flex;
+    align-items: center; /* Center items vertically */
+    border-radius: 20px 0 0 20px; /* Curved top left corner */
+    height: 400px; /* Adjust height as needed */
+    width: 50px;
+}
+
+
+
+.vertical-text {
+    display: flex;
+    flex-direction: column; /* Stack letters vertically */
+}
+
+.vertical-text span {
+    line-height: 1.5; /* Space between letters */
+}
+
+
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 30px; /* Space between grid items */
+    height: 900px; /* Adjust height as needed */
+    width: 1200px;
+    padding-left: 200px;
+}
+
+/* .item {
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    display: flex;
+    flex-direction: column; 
+    font-size: 18px;
+    padding: 0;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+} */
+
+.header {
+    background-color: black;
+    color: white;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between; /* Space out header content */
+    align-items: center;
+    height: 50px;
+    width: 100%; /* Take full width of the container */
+    box-sizing: border-box;
+    font-size: 15px;
+}
+
+.header h2 {
+    margin: 0; /* Remove any default margin */
+    color: white;
+    font-size: 18px;
+}
+
+.info-icon {
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.content {
+    background-color: white;
+    padding: 15px;
+    font-size: 16px;
+    color: #333;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Box shadow for depth */
+    border-radius: 5px; /* Rounded corners */
+    
+}
+.item {
+    width: 400px;
+    height: 500px;
+    background: #FFF;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    padding: 20px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    display: flex;
+    flex-direction: column; 
+    font-size: 18px;
+    padding: 0;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+}
+.item h2, .item p {
+    margin: 0;
+    padding: 10px 0;
+}
+.item textarea, .item input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.expandable {
+    cursor: pointer;
+    background: #f9f9f9;
+    border-bottom: 1px solid #ddd;
+    padding: 10px;
+    border-top: 1px solid #ddd;
+}
+.expandable:hover {
+    background-color: #f0f0f0;
+}
+.expandable:not(:last-child) {
+    border-bottom: none;
+}
+.expandable-content {
+    display: none;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+}
+input[type="text"], textarea {
+    width: 100%;
+    margin-top: 10px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+button {
+    margin-top: 10px;
+    padding: 10px 20px;
+}
+.dropdown-content {
+    display: none;
+    flex-direction: column;
+}
+.dropdown-btn {
+    cursor: pointer;
+}
